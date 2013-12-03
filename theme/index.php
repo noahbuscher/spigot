@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>:: Spigot ::</title>
+		<title>Spigot</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="<?php echo the_stylesheet(); ?>">
