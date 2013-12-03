@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>:: Spigot ::</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<?php echo the_stylesheet(); ?>">
 	</head>
 	<body>

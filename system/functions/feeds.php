@@ -72,7 +72,7 @@ function cmp($a, $b){
  */
 function the_title() {
 	global $feed;
-	return $feed['title'];
+	return ucfirst($feed['title']);
 }
 
 /**
