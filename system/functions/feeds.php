@@ -93,4 +93,13 @@ function the_date() {
 	return date('m/d/y', strtotime($feed['pubDate']));
 }
 
+/**
+ * LOOP
+ * Gets item link
+ */
+function the_link() {
+	global $feed;
+	return $feed['link'];
+}
+
 ?>

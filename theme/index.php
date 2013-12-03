@@ -7,7 +7,7 @@
 		<div class="wrap">
 			<?php while(have_feed()) : thefeed() ?>
 					<div class="item">
-						<h1><?php echo the_title(); ?></h1>
+						<a href="<?php echo the_link(); ?>"><h1><?php echo the_title(); ?></h1></a>
 						<h2><?php echo the_date(); ?></h2>
 						<p>
 							<?php echo the_description(); ?>

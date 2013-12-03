@@ -10,6 +10,10 @@ footer {
 	padding-bottom: 40px;
 }
 
+a {
+	text-decoration: none;
+}
+
 p {
 	font-family: Georgia, serif;
 	color: #7D7D7D;
