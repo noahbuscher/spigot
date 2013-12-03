@@ -14,6 +14,10 @@ a {
 	text-decoration: none;
 }
 
+footer>a {
+	color: #C4C4C4;
+}
+
 p {
 	font-family: Georgia, serif;
 	color: #7D7D7D;

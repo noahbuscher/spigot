@@ -18,7 +18,7 @@
 			<?php endwhile; ?>
 		</div>
 		<footer>
-			Spigot
+			<a href="https://github.com/Codingbean/Spigot">Spigot</a>
 		</footer>
 	</body>
 </html>
