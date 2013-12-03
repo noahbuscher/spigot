@@ -22,10 +22,11 @@ p {
 }
 
 h1 {
-	font-size: 52px;
+	font-size: 50px;
 	color: #2E2E2E;
 	margin: 0px;
 	margin-bottom: 10px;
+	font-weight: 600;
 }
 
 h2 {
@@ -39,6 +40,6 @@ h2 {
 	min-width: 350px;
 	max-width: 350px;
 	margin: 0 auto;
-	overflow: auto;
+	overflow: visible;
 	padding-top: 60px;
 }
