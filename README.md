@@ -1,7 +1,7 @@
 Spigot
 ======
 
-A zen RSS reader for coffee addicts.
+A minimalist RSS reader for coffee addicts.
 
 Use
 ===
