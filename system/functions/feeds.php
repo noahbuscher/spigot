@@ -32,7 +32,7 @@ function have_feed() {
 	}
 
 	$feeds = $reads;
-	usort($feeds, "cmp");
+	usort($feeds, 'dateSort');
 
 	$feeds_count = count($feeds);
 
@@ -55,7 +55,10 @@ function thefeed() {
 	return $feed;
 }
 
-function cmp($a, $b){
+/**
+ * Template to sort the item array
+ */
+function dateSort($a, $b){
 
     $a = strtotime($a['pubDate']);
     $b = strtotime($b['pubDate']);
