@@ -18,7 +18,14 @@ a {
 }
 
 footer>a {
-	color: #C4C4C4;
+	color: #bbb;
+}
+
+p img {
+	clear: both;
+	min-width: 100%;
+	max-width: 100%;
+	margin-bottom: 1.65em;
 }
 
 p {
@@ -67,4 +74,28 @@ h2 {
 	margin-bottom: 3em;
 	padding-bottom: 2em;
 	border-bottom: 1px solid #e0e0e0;
+}
+
+.pagination {
+	margin-bottom: 1.65em;
+}
+
+.pagination>a {
+	color: #fff;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-decoration: none;
+	background-color: #3498db;
+	padding: 5px;
+	border-radius: 3px;
+	transition: linear 1s;
+}
+
+.pagination>a:hover {
+	background-color: #f1c40f;
+	transition: linear 1s;
+}
+
+.feedflare {
+	display: none;
 }
