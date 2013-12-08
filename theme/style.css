@@ -28,6 +28,13 @@ p img {
 	margin-bottom: 1.65em;
 }
 
+p a img {
+	max-width: 100%;
+	min-width: 100%;
+	clear: both;
+	margin-bottom: 1.65em;
+}
+
 p {
 	color: #555;
 	font-size: 16px;
@@ -105,4 +112,8 @@ h2 {
 
 .feedflare {
 	display: none;
+}
+
+.item td {
+	max-width: 650px;
 }
