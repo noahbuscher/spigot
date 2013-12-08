@@ -19,6 +19,7 @@
 			<?php endwhile; ?>
 		</div>
 		<footer>
+			<div class="pagination"><?php pagination(); ?></div>
 			<a href="https://github.com/Codingbean/Spigot">Spigot</a>
 		</footer>
 	</body>

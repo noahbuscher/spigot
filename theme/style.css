@@ -68,3 +68,10 @@ h2 {
 	padding-bottom: 2em;
 	border-bottom: 1px solid #e0e0e0;
 }
+
+.pagination>a {
+	color: #C4C4C4;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-decoration: none;
+}

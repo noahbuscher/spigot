@@ -6,13 +6,19 @@
 $feeds = null;
 $feed = null;
 $feeds_count = 0;
+$page = $_GET['page'];
 $feeds_index = 0;
+$feeds_top;
+for ($i = 1; $i < $page; $i++) {
+	$feeds_index = $feeds_index + 10;
+}
+$feeds_top = $feeds_index + 10;
 
 /**
  * Check if have feeds to loop through
  */
 function have_feed() {
-	global $feeds_index, $feeds, $feeds_count;
+	global $feeds_index, $feeds, $feeds_count, $feeds_top;
 	$feeds = json_decode(file_get_contents(PATH . 'feeds.json'), true);
 
 	$all_feeds = array();
@@ -36,7 +42,7 @@ function have_feed() {
 
 	$feeds_count = count($feeds);
 
-	if ($feeds && $feeds_index + 1 <= $feeds_count) {
+	if ($feeds && $feeds_index + 1 <= $feeds_top && $feeds_index < $feeds_count) {
 		$feeds_index++;
 		return true;
 	} else {
@@ -56,10 +62,33 @@ function thefeed() {
 }
 
 /**
+ * Gets the total number of items
+ */
+function count_feeds() {
+	global $feeds;
+	$feeds = json_decode(file_get_contents(PATH . 'feeds.json'), true);
+
+	$all_feeds = array();
+	$reads = array();
+
+	foreach ($feeds as $feed) {
+		$feed_array = json_decode(json_encode((array)simplexml_load_file($feed, 'SimpleXMLElement', LIBXML_NOCDATA)), 1);
+		$feed_items = $feed_array['channel']['item'];
+		array_push($all_feeds, $feed_items);
+	}
+
+	for ($i = 0; $i < count($all_feeds); $i++) {
+		$subs = $all_feeds[$i];
+		for ($a = 0; $a < count($subs); $a++) {
+			array_push($reads, $all_feeds[$i][$a]);
+		}
+	}
+	return count($reads);
+}
+/**
  * Template to sort the item array
  */
 function dateSort($a, $b){
-
     $a = strtotime($a['pubDate']);
     $b = strtotime($b['pubDate']);
 
@@ -103,6 +132,21 @@ function the_date() {
 function the_link() {
 	global $feed;
 	return $feed['link'];
+}
+
+/**
+ * Those arrow thingies
+ */
+function pagination() {
+	global $page, $feeds_top;
+	if ($feeds_top < count_feeds()) {
+		$next = $page + 1;
+		echo '<a href="' . BASE . '?page=' . $next . '">More</a>';
+	}
+	if ($page > 1) {
+		$prev = $page - 1;
+		echo '<a href="' . BASE . '?page=' . $prev . '">Less</a>';
+	}
 }
 
 ?>
