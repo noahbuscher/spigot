@@ -7,6 +7,9 @@ $feeds = null;
 $feed = null;
 $feeds_count = 0;
 $page = $_GET['page'];
+if ($page == 0) {
+	$page++;
+}
 $feeds_index = 0;
 $feeds_top;
 for ($i = 1; $i < $page; $i++) {
@@ -30,11 +33,14 @@ function have_feed() {
 		array_push($all_feeds, $feed_items);
 	}
 
+	$subs = array();
+
 	for ($i = 0; $i < count($all_feeds); $i++) {
-		$subs = $all_feeds[$i];
-		for ($a = 0; $a < count($subs); $a++) {
-			array_push($reads, $all_feeds[$i][$a]);
-		}
+		array_push($subs, $all_feeds[$i]);
+	}
+
+	for ($a = 0; $a < count($subs); $a++) {
+		$reads = $reads + $subs[$a];
 	}
 
 	$feeds = $reads;
@@ -139,13 +145,13 @@ function the_link() {
  */
 function pagination() {
 	global $page, $feeds_top;
-	if ($feeds_top < count_feeds()) {
-		$next = $page + 1;
-		echo '<a href="' . BASE . '?page=' . $next . '">More</a>';
-	}
 	if ($page > 1) {
 		$prev = $page - 1;
 		echo '<a href="' . BASE . '?page=' . $prev . '">Less</a>';
+	}
+	if ($feeds_top < count_feeds()) {
+		$next = $page + 1;
+		echo '<a href="' . BASE . '?page=' . $next . '">More</a>';
 	}
 }
 
