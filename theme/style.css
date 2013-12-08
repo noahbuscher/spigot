@@ -76,16 +76,15 @@ h2 {
 	border-bottom: 1px solid #e0e0e0;
 }
 
-<<<<<<< HEAD
 .pagination>a {
 	color: #C4C4C4;
 	margin-left: 5px;
 	margin-right: 5px;
 	text-decoration: none;
 }
-=======
+
 .pagination {
-	margin-bottom: 1.65em;
+	margin-bottom: 2em;
 }
 
 .pagination>a {
@@ -107,4 +106,3 @@ h2 {
 .feedflare {
 	display: none;
 }
->>>>>>> b53e70f1a5bfc47fc87b513da9d74b2da11e6459
