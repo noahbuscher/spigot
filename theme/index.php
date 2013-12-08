@@ -1,9 +1,10 @@
-<html>
+<html lang="en">
 	<head>
 		<title>Spigot</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:200,100,300,400,600' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="<?php echo the_stylesheet(); ?>">
 	</head>
 	<body>
