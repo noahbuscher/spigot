@@ -1,16 +1,16 @@
 body {
+	background-color: #FAFAFA;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	background-color: #FAFAFA;
 	line-height: 1.65em;
 }
 
 footer {
-	font-size: 13px;
 	color: #C4C4C4;
-	text-align: center;
-	padding-top: 20px;
+	font-size: 13px;
 	padding-bottom: 40px;
+	padding-top: 20px;
+	text-align: center;
 }
 
 a {
@@ -23,16 +23,14 @@ footer>a {
 
 p img {
 	clear: both;
-	min-width: 100%;
 	max-width: 100%;
 	margin-bottom: 1.65em;
 }
 
 p a img {
-	max-width: 100%;
-	min-width: 100%;
 	clear: both;
 	margin-bottom: 1.65em;
+	max-width: 100%;
 }
 
 p {
@@ -42,17 +40,17 @@ p {
 }
 
 h1 {
-	font-size: 30px;
 	color: #222;
-	margin: 0px;
-	font-weight: 300;
 	font-family: Roboto Slab, Open Sans, sans-serif;
+	font-size: 30px;
+	font-weight: 300;
 	line-height: 1em;
+	margin: 0;
 }
 
 a>h1 {
-	text-align: left;
 	color: #3498db;
+	text-align: left;
 	transition: linear 1s;
 }
 
@@ -61,47 +59,44 @@ a:hover>h1, a:active>h1 {
 	transition: linear 1s;
 }
 
-h2 {
-	font-weight: 300;
-	font-size: 14px;
+.date {
 	color: #C4C4C4;
-	margin-bottom: 2em;
 	display: none;
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 2em;
 }
 
 .wrap {
-	min-width: 350px;
-	max-width: 650px;
 	margin: 0 auto;
-	overflow: visible;
+	max-width: 650px;
+	min-width: 300px;
 	padding-top: 4em;
 }
 
 .item {
+	border-bottom: 1px solid #e0e0e0;
 	margin-bottom: 3em;
 	padding-bottom: 2em;
-	border-bottom: 1px solid #e0e0e0;
 }
 
-.pagination>a {
-	color: #C4C4C4;
-	margin-left: 5px;
-	margin-right: 5px;
-	text-decoration: none;
+.item td {
+	max-width: 650px;
 }
+
 
 .pagination {
 	margin-bottom: 2em;
 }
 
 .pagination>a {
+	background-color: #3498db;
+	border-radius: 3px;
 	color: #fff;
 	margin-left: 5px;
 	margin-right: 5px;
-	text-decoration: none;
-	background-color: #3498db;
 	padding: 5px;
-	border-radius: 3px;
+	text-decoration: none;
 	transition: linear 1s;
 }
 
@@ -112,8 +107,4 @@ h2 {
 
 .feedflare {
 	display: none;
-}
-
-.item td {
-	max-width: 650px;
 }
