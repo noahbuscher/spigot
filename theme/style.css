@@ -1,8 +1,17 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
 body {
 	background-color: #FAFAFA;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	line-height: 1.65em;
+	margin: 0;
+}
+
+header, footer {
+	display: block;
 }
 
 footer {
@@ -71,13 +80,25 @@ a:hover>h1, a:active>h1 {
 	margin: 0 auto;
 	max-width: 650px;
 	min-width: 300px;
-	padding-top: 4em;
+	overflow: hidden;
+	padding: 4em 2em;
+}
+
+.iframe {
+	max-width: 100%;
+}
+
+.clean-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .item {
 	border-bottom: 1px solid #e0e0e0;
 	margin-bottom: 3em;
 	padding-bottom: 2em;
+	overflow: auto;
 }
 
 .item td {
